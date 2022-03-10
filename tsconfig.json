@@ -1,0 +1,18 @@
+{
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist/**/*.js"
+    ],
+    "compilerOptions": {
+        "module": "Commonjs",
+        "rootDir": "src",
+        "outDir": "dist",
+        "target": "es5",
+        "strict": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true
+    }
+}
