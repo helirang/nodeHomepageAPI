@@ -19,11 +19,9 @@ app.use((req,res,next)=>{
 app.use(function(err:any,req:express.Request,res:express.Response,next:express.NextFunction){
     let recordError:string;
     let {pw} = req.body;
-
     recordError = pw ? 
     err+'[path]:'+req.method+' '+req.path: 
     err+' [body]:'+JSON.stringify(req.body)+' [path]:'+req.path;
-    
     logger.error(recordError);
 });
 

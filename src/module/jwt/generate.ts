@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 dotenv.config();
 
 class options implements jwt.SignOptions{
-    algorithm?: jwt.Algorithm = 'HS256';
+    algorithm?: jwt.Algorithm = process.env.algorithm as jwt.Algorithm;
     expiresIn?: string = process.env.expiresIn;
     issuer?: string = process.env.issuer;
 };
